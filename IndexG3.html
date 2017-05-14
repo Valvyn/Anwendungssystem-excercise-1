@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+	
+
+	<meta charset="UTF-8">
+		<title>AnwSys JS DemoApp</title>
+	
+
+		<link rel="stylesheet" type="text/css" href="./style1.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+		<script type="text/javascript" src="./script1.js" async></script>
+
+</head>
+
+
+
+<body>
+	
+	<div id="wrapper">
+
+		<header>
+			<img src="StromNeu2.png" width="100%" height=100>
+		</header>
+
+		<nav>
+			<center><b><FONT FACE="Calibri">Menü</FONT></b></center>
+
+			<ul class="nav nav-list">				
+			
+			<li><a href="index1.html">Startseite</a></li>
+			<li><a href="IndexG1.html"><FONT FACE="Calibri">Smart Meter 1</FONT></a></li>		
+			<li><a href="IndexG2.html"><FONT FACE="Calibri">Smart Meter 2</FONT></a></li>
+			<li><a class="active"><FONT FACE="Calibri">Smart Meter 3</FONT></a></li>
+			<li><a href="#"><FONT FACE="Calibri">Unser Team</FONT></a></li>
+			
+
+			</ul>
+
+			<input class="button1" type="button" value="SmartMeter1">
+			
+		</nav>
+
+		<div id="content">
+		
+
+		
+		<center>
+		
+		    <br><img src="Gerät33.jpg" width="30%" height=220 /></br>
+		</center>
+
+        <br><center>
+<table border="2" bgcolor="white">
+        <tr>
+                <td width="200" height="10">Gerätekennung</td>
+                <td width="300" height="10">YY-24796835</td>
+        </tr>
+                <td width="200" height="10">Maximale Belastung</td>
+                <td width="300" height="10">95 A</td>        
+</table>
+</center></br>
+
+    <br><center>
+<table border="2" bgcolor="white" onload="zufallsZahl()">
+        <tr>
+                <th colspan="2">Aktueller Status:</td>
+        
+        </tr>
+        <tr>
+                <td width="200" height="10">Spannung</td>
+                <td width="300" height="10">
+
+                <body onload="zufallsZahl1()">
+                    <b id="ausgabe1"></b>
+                </body>           
+
+                </td>
+        </tr>
+        <tr>
+                <td width="200" height="10">Stromstärke</td>
+                <td width="300" height="10">
+			<b id="ausgabe2"></b>
+                </td>
+        </tr>        
+</table>
+</center></br>
+
+		</div>
+
+		<footer>
+			Impressum			
+		</footer>
+	</div>
+
+</body>
+
+
+</html>
