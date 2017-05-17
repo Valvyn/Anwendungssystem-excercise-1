@@ -32,20 +32,17 @@ function Runden2Dezimal(randomVoltage) {
   return Math.round(randomVoltage * 10) / 10 ;
 }
 
-var elem = document.getElementById('los');
+var elem = document.getElementById('submit');
 elem.addEventListener('click', chkFormular);
 
-if (document.Formular.Verbrauch.value != "" && document.Formular.Name != "") {
-  elemUhr = new Date();
-  document.getElementById("ausgabe3").innerHTML = new Date;
-}
-
 function chkFormular() {
-  if (document.Formular.Name.value == "") {
-  	alert("Bitte geben Sie ihr Nutzerkennung ein!");
-  	}
 
-    if (document.Formular.Verbrauch.value == "") {
-  	alert("Bitte Ihren Verbrauchswert (in kWh) ein!");
+  if (document.Formular.Verbrauch.value != "" && document.Formular.Name != "") {
+    elemUhr = new Date();
+    document.getElementById("ausgabe3").innerHTML = new Date;
+    var table = document.getElementById("formDataTable");
+    
+  }else{
+    alert("Bitte füllen sie beide Spalten aus!");
   }
 }

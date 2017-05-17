@@ -96,7 +96,23 @@
 </center></br>
 
 <center><br>
-<table border=2" bgcolor="white">
+
+<table id="formDataTable" border="2" bgcolor="white">
+  <tr>
+    <th colspan="2">Verbrauchstabelle:</td>
+  </tr>
+
+	<tr>
+		<td>
+			<label style="margin-right: 80px;"> Nutzerkennung: </label>
+		</td>
+		<td>
+			<label style="margin-right: 80px;"> Verbrauch: </label>
+    </td>
+  </tr>
+</table>
+
+<table border="2" bgcolor="white">
 
 	<main>
 		<form name="Formular" action="" method="post">
@@ -108,26 +124,21 @@
 
 			<label for="Name" style="margin-right: 80px;"> Nutzerkennung: </label>
 		</td>
-		<td>
-
-			<input size="40" name="Name" id="Name">
-
-                </td>
-        </tr>
+				<td>
+					<input type="text" name="Name" id="Name">
+        </td>
+      </tr>
+		<tr>
+			<td>
+				<label for="Verbrauch" style="margin-right: 20px;"> Verbrauchswert (in kWh):</label>
+			</td>
+			<td>
+				<input type="text" name="Verbrauch" id="Verbrauch">
+    	</td>
+    </tr>
 	<tr>
 		<td>
-
-			<label for="Verbrauch" style="margin-right: 20px;"> Verbrauchswert (in kWh):</label>
-		</td>
-		<td>
-
-			<input size="40" name="Verbrauch" id="Verbrauch">
-
-                </td>
-        </tr>
-	<tr>
-		<td>
-		<button id="los" type="submit"> Absenden</button>
+		<button id="submit" type="submit"> Absenden</button>
 		</td>
 		<td>
 			<b id="ausgabe3"></b>
