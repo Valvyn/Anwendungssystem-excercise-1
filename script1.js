@@ -13,11 +13,11 @@ function zufallsZahl1() {
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
   if(roundedRandomVoltage != ""){
-    elem4=(Math.random() * (maxAmpere - minAmpere + 1)) + minAmpere;
-    elem3 = Runden2Dezimal(elem4)
-    document.getElementById("ausgabe2").innerHTML = elem3;
+    randomAmpere=(Math.random() * (maxAmpere - minAmpere + 1)) + minAmpere;
+    roundedRandomAmpere = Runden2Dezimal(randomAmpere)
+    document.getElementById("ausgabe2").innerHTML = roundedRandomAmpere;
 
-    if(elem3 > 5){
+    if(roundedRandomAmpere > 5){
     alert("Warnung, Stromstärke überprüfen!");
     }
   }
