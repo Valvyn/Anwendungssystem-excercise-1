@@ -10,10 +10,10 @@ function zufallsZahl1() {
     var max2 = 7;
 
 
-    var elem1 = (Math.random() * (max - min + 1)) + min;
-    var elem2 = Runden2Dezimal(elem1)
+    var randomVoltage = (Math.random() * (max - min + 1)) + min;
+    var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
-    if(elem2 != ""){
+    if(roundedRandomVoltage != ""){
         elem4=(Math.random() * (max2 - min2 + 1)) + min2;
         elem3 = Runden2Dezimal(elem4)
         document.getElementById("ausgabe2").innerHTML = elem3;
@@ -23,12 +23,12 @@ function zufallsZahl1() {
         }
     }
 
-    document.getElementById("ausgabe1").innerHTML = elem1;
+    document.getElementById("ausgabe1").innerHTML = randomVoltage;
 }
 
 
-function Runden2Dezimal(elem1) {
-    Ergebnis = Math.round(elem1 * 10) / 10 ;
+function Runden2Dezimal(randomVoltage) {
+    Ergebnis = Math.round(randomVoltage * 10) / 10 ;
     return Ergebnis;
 }
 
