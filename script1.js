@@ -13,7 +13,6 @@ function zufallsZahl1() {
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
   if(roundedRandomVoltage != ""){
-    debugger
     elem4=(Math.random() * (maxAmpere - minAmpere + 1)) + minAmpere;
     elem3 = Runden2Dezimal(elem4)
     document.getElementById("ausgabe2").innerHTML = elem3;
