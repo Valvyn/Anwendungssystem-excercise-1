@@ -4,16 +4,14 @@ $( document ).ready(function(){
 });
 
 function zufallsZahl1() {
-    var elem1;
-    var elem2;
     var min = 220;
     var max = 240;
     var min2 = 0;
     var max2 = 7;
 
 
-    elem1 = (Math.random() * (max - min + 1)) + min;
-    elem2 = Runden2Dezimal(elem1)
+    var elem1 = (Math.random() * (max - min + 1)) + min;
+    var elem2 = Runden2Dezimal(elem1)
 
     if(elem2 != ""){
         elem4=(Math.random() * (max2 - min2 + 1)) + min2;
