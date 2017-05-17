@@ -9,13 +9,13 @@ function zufallsZahl1() {
   var minAmpere = 0;
 
   var maxLoad = document.getElementById("maxLoad").textContent;
-  maxLoad = maxLoad.match(/\d+/)[0];
+  maxLoad = parseInt(maxLoad.match(/\d+/)[0]);
 
-  var randomVoltage = ((Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage) + 5;
+  var randomVoltage = (Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage;
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
   if(roundedRandomVoltage != ""){
-    randomAmpere=(Math.random() * (maxLoad - minAmpere + 1)) + minAmpere;
+    randomAmpere=((Math.random() * (maxLoad - minAmpere + 1)) + minAmpere) + 5;
     roundedRandomAmpere = Runden2Dezimal(randomAmpere)
     document.getElementById("ausgabe2").innerHTML = roundedRandomAmpere;
 
