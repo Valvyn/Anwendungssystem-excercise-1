@@ -5,15 +5,15 @@
 
 
 <head>
-	
+
 
 	<meta charset="UTF-8">
 		<title>AnwSys JS DemoApp</title>
-	
+
 
 		<link rel="stylesheet" type="text/css" href="./style1.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
+
 		<script type="text/javascript" src="./script1.js" async></script>
 
 </head>
@@ -21,7 +21,7 @@
 
 
 <body>
-	
+
 	<div id="wrapper">
 
 		<header>
@@ -31,25 +31,25 @@
 		<nav>
 			<center><b><FONT FACE="Calibri">Menü</FONT></b></center>
 
-			<ul class="nav nav-list">				
-			
+			<ul class="nav nav-list">
+
 			<li><a href="index1.html">Startseite</a></li>
-			<li><a class="active"><FONT FACE="Calibri">Smart Meter 1</FONT></a></li>		
+			<li><a class="active"><FONT FACE="Calibri">Smart Meter 1</FONT></a></li>
 			<li><a href="IndexG2.html"><FONT FACE="Calibri">Smart Meter 2</FONT></a></li>
 			<li><a href="IndexG3.html"><FONT FACE="Calibri">Smart Meter 3</FONT></a></li>
 			<li><a href="#"><FONT FACE="Calibri">Unser Team</FONT></a></li>
-			
+
 
 			</ul>
 
 			<input class="button1" type="button" value="SmartMeter1">
-			  
+
 		</nav>
 
 		<div id="content">
-		
 
-		
+
+
 		<center>
 		    <br><img src="Gerät11.jpg" width="30%" height=220 /></br>
 		</center>
@@ -63,8 +63,8 @@
         </tr>
         <tr>
                 <td width="200" height="10">Maximale Belastung</td>
-                <td width="300" height="10">55 A</td>
-        </tr>        
+                <td id="maxLoad" width="300" height="10">55 A</td>
+        </tr>
 </table>
 </center></br>
 
@@ -72,7 +72,7 @@
 <table border="2" bgcolor="white" onload="zufallsZahl()">
         <tr>
                 <th colspan="2">Aktueller Status:</td>
-        
+
         </tr>
         <tr>
     <td width="200" height="10">Spannung</td>
@@ -80,7 +80,7 @@
 
                <body onload="zufallsZahl1()">
                     <b id="ausgabe1"></b>
-                </body>           
+                </body>
 
                 </td>
         </tr>
@@ -91,7 +91,7 @@
 			<b id="ausgabe2"></b>
 
 		</td>
-        </tr>        
+        </tr>
 </table>
 </center></br>
 
@@ -105,22 +105,22 @@
 	</tr>
 	<tr>
 		<td>
-    
+
 			<label for="Name" style="margin-right: 80px;"> Nutzerkennung: </label>
 		</td>
 		<td>
-                          
+
 			<input size="40" name="Name" id="Name">
 
                 </td>
         </tr>
 	<tr>
 		<td>
-    
+
 			<label for="Verbrauch" style="margin-right: 20px;"> Verbrauchswert (in kWh):</label>
 		</td>
 		<td>
-                          
+
 			<input size="40" name="Verbrauch" id="Verbrauch">
 
                 </td>
@@ -140,11 +140,11 @@
 </table>
 </center></br>
 
-		               
+
 		</div>
 
 		<footer>
-			Impressum			
+			Impressum
 		</footer>
 	</div>
 

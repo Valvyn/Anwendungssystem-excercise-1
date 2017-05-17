@@ -9,6 +9,9 @@ function zufallsZahl1() {
   var minAmpere = 0;
   var maxAmpere = 7;
 
+  var maxLoad = document.getElementById("maxLoad").textContent;
+  maxLoad = maxCurrentLoad.match(/\d+/)[0];
+
   var randomVoltage = (Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage;
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
