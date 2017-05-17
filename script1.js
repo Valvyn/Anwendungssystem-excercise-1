@@ -4,12 +4,12 @@ $( document ).ready(function(){
 });
 
 function zufallsZahl1() {
-  var min = 220;
-  var max = 240;
+  var minVoltage = 220;
+  var maxVoltage = 240;
   var minAmpere = 0;
   var maxAmpere = 7;
 
-  var randomVoltage = (Math.random() * (max - min + 1)) + min;
+  var randomVoltage = (Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage;
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
   if(roundedRandomVoltage != ""){
