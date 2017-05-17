@@ -7,20 +7,19 @@ function zufallsZahl1() {
   var minVoltage = 220;
   var maxVoltage = 240;
   var minAmpere = 0;
-  var maxAmpere = 7;
 
   var maxLoad = document.getElementById("maxLoad").textContent;
-  maxLoad = maxCurrentLoad.match(/\d+/)[0];
+  maxLoad = maxLoad.match(/\d+/)[0];
 
-  var randomVoltage = (Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage;
+  var randomVoltage = ((Math.random() * (maxVoltage - minVoltage + 1)) + minVoltage) + 5;
   var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
   if(roundedRandomVoltage != ""){
-    randomAmpere=(Math.random() * (maxAmpere - minAmpere + 1)) + minAmpere;
+    randomAmpere=(Math.random() * (maxLoad - minAmpere + 1)) + minAmpere;
     roundedRandomAmpere = Runden2Dezimal(randomAmpere)
     document.getElementById("ausgabe2").innerHTML = roundedRandomAmpere;
 
-    if(roundedRandomAmpere > 5){
+    if(roundedRandomAmpere > maxLoad){
     alert("Warnung, Stromstärke überprüfen!");
     }
   }
