@@ -6,15 +6,15 @@ $( document ).ready(function(){
 function zufallsZahl1() {
     var min = 220;
     var max = 240;
-    var min2 = 0;
-    var max2 = 7;
+    var minAmpere = 0;
+    var maxAmpere = 7;
 
-
+    debugger
     var randomVoltage = (Math.random() * (max - min + 1)) + min;
     var roundedRandomVoltage = Runden2Dezimal(randomVoltage)
 
     if(roundedRandomVoltage != ""){
-        elem4=(Math.random() * (max2 - min2 + 1)) + min2;
+        elem4=(Math.random() * (maxAmpere - minAmpere + 1)) + minAmpere;
         elem3 = Runden2Dezimal(elem4)
         document.getElementById("ausgabe2").innerHTML = elem3;
 
