@@ -28,8 +28,7 @@ function zufallsZahl1() {
 
 
 function Runden2Dezimal(randomVoltage) {
-    Ergebnis = Math.round(randomVoltage * 10) / 10 ;
-    return Ergebnis;
+    return Math.round(randomVoltage * 10) / 10 ;
 }
 
 var elem = document.getElementById('los');
