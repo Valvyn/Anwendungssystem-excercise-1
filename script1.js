@@ -24,7 +24,7 @@ function zufallsZahl1() {
     }
   }
 
-  document.getElementById("ausgabe1").innerHTML = randomVoltage;
+  document.getElementById("ausgabe1").innerHTML = roundedRandomVoltage;
 }
 
 
@@ -32,16 +32,41 @@ function Runden2Dezimal(randomVoltage) {
   return Math.round(randomVoltage * 10) / 10 ;
 }
 
-var elem = document.getElementById('submit');
+var elem = document.getElementById('los');
 elem.addEventListener('click', chkFormular);
 
-function chkFormular() {
+var form = document.getElementById("submitForm");
+function handleForm(event) { event.preventDefault(); }
+form.addEventListener('submit', handleForm);
 
-  if (document.Formular.Verbrauch.value != "" && document.Formular.Name != "") {
+function checkUserInput(user, usage) {
+  if (user.match(/^\S{2}\d{2}$/) == user && usage.match(/\d*/) == usage){
+    return true;
+  }
+  return false;
+}
+
+function chkFormular() {
+  var user = document.Formular.Name.value
+  var usage = document.Formular.Verbrauch.value
+  if ( user != "" && usage != "" ) {
+    if (checkUserInput(user, usage)){
+      console.log("works");
+    }else{
+      alert("Bitte geben sie korrekt Daten ein")
+      return;
+    }
     elemUhr = new Date();
     document.getElementById("ausgabe3").innerHTML = new Date;
     var table = document.getElementById("formDataTable");
-    
+    var row = table.insertRow(table.rows.length);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = document.Formular.Name.value
+    cell2.innerHTML = document.Formular.Verbrauch.value
+    cell3.innerHTML = elemUhr
   }else{
     alert("Bitte füllen sie beide Spalten aus!");
   }
