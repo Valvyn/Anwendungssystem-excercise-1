@@ -56,8 +56,7 @@ function chkFormular() {
       alert("Bitte geben sie korrekt Daten ein")
       return;
     }
-    elemUhr = new Date();
-    document.getElementById("ausgabe3").innerHTML = new Date;
+    currentTime = new Date();
     var table = document.getElementById("formDataTable");
     var row = table.insertRow(table.rows.length);
     var cell1 = row.insertCell(0);
@@ -66,7 +65,7 @@ function chkFormular() {
 
     cell1.innerHTML = document.Formular.Name.value
     cell2.innerHTML = document.Formular.Verbrauch.value
-    cell3.innerHTML = elemUhr
+    cell3.innerHTML = currentTime
   }else{
     alert("Bitte füllen sie beide Spalten aus!");
   }
