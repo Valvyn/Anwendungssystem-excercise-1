@@ -20,7 +20,7 @@ function zufallsZahl1() {
     document.getElementById("ausgabe2").innerHTML = roundedRandomAmpere;
 
     if(roundedRandomAmpere > maxLoad){
-    alert("Warnung, Stromstärke überprüfen!");
+    alert("Warnung, Stromzähler überlastet!");
     }
   }
 
