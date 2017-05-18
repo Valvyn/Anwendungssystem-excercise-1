@@ -60,17 +60,17 @@
 </table>
 </center></br>
 
-    <br><center>
+<br><center>
 <table border="2" bgcolor="white" onload="zufallsZahl()">
         <tr>
                 <th colspan="2">Aktueller Status:</td>
 
         </tr>
         <tr>
-                <td width="200" height="10">Spannung</td>
+    <td width="200" height="10">Spannung</td>
                 <td width="300" height="10">
 
-                <body onload="zufallsZahl1()">
+               <body onload="zufallsZahl1()">
                     <b id="ausgabe1"></b>
                 </body>
 
@@ -79,11 +79,75 @@
         <tr>
                 <td width="200" height="10">Stromstärke</td>
                 <td width="300" height="10">
+
 			<b id="ausgabe2"></b>
-                </td>
+
+		</td>
         </tr>
 </table>
 </center></br>
+
+<center><br>
+
+<table id="formDataTable" border="2" bgcolor="white">
+  <tr>
+    <th colspan="3">Verbrauchstabelle:</td>
+  </tr>
+
+	<tr>
+		<td>
+			<label style="margin-right: 80px;"> Nutzerkennung: </label>
+		</td>
+		<td>
+			<label style="margin-right: 80px;"> Verbrauch: </label>
+    </td>
+		<td>
+			<label style="margin-right: 80px;"> Datum: </label>
+    </td>
+  </tr>
+</table>
+
+</center></br>
+
+<center><br>
+
+<table border="2" bgcolor="white">
+	<main>
+		<form name="Formular" id="submitForm">
+	<tr>
+		<th colspan="2"> Formular zum ablesen:</th>
+	</tr>
+	<tr>
+		<td>
+			<label for="Name" style="margin-right: 80px;"> Nutzerkennung: </label>
+		</td>
+				<td>
+					<input type="text" name="Name" id="Name">
+        </td>
+      </tr>
+		<tr>
+			<td>
+				<label for="Verbrauch" style="margin-right: 20px;"> Verbrauchswert (in kWh):</label>
+			</td>
+			<td>
+				<input type="text" name="Verbrauch" id="Verbrauch">
+    	</td>
+    </tr>
+	<tr>
+		<td>
+		<button id="los"> Absenden</button>
+		</td>
+		<td>
+			<b id="ausgabe3"></b>
+		</td>
+	</tr>
+
+	</form>
+</main>
+
+</table>
+</center></br>
+
 
 		</div>
 
