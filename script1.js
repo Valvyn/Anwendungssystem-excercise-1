@@ -39,21 +39,29 @@ var form = document.getElementById("submitForm");
 function handleForm(event) { event.preventDefault(); }
 form.addEventListener('submit', handleForm);
 
+var allowedUsers = ["FL46", "TH93", "HA34", "NA20"]
+
 function checkUserInput(user, usage) {
   if (user.match(/^\S{2}\d{2}$/) == user && usage.match(/\d*/) == usage){
-    return true;
+    for (i = 0; i < allowedUsers.length; i++) {
+      if (allowedUsers[i] == user) {
+        return true;
+      }
+    }
+    alert("Ihre Nutzerkennung ist nicht authorisiert");
+  } else {
+    alert("Bitte benutzen sie das richtige Nutzerkennungs und Verbrauchswert Format");
   }
   return false;
 }
 
 function chkFormular() {
-  var user = document.Formular.Name.value
-  var usage = document.Formular.Verbrauch.value
+  var user = document.Formular.Name.value;
+  var usage = document.Formular.Verbrauch.value;
   if ( user != "" && usage != "" ) {
     if (checkUserInput(user, usage)){
       console.log("works");
     }else{
-      alert("Bitte geben sie korrekt Daten ein")
       return;
     }
     currentTime = new Date();
