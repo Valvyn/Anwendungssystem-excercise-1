@@ -9,46 +9,29 @@
 
 	<meta charset="UTF-8">
 		<title>AnwSys JS DemoApp</title>
-
-
 		<link rel="stylesheet" type="text/css" href="./style1.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 		<script type="text/javascript" src="./script1.js" async></script>
-
 </head>
 
-
-
 <body>
-
 	<div id="wrapper">
-
 		<header>
 			<img src="StromNeu2.png" width="100%" height=100>
 		</header>
-
 		<nav>
 			<center><b><FONT FACE="Calibri">Menü</FONT></b></center>
-
 			<ul class="nav nav-list">
-
 			<li><a href="index.html">Startseite</a></li>
 			<li><a class="active"><FONT FACE="Calibri">Smart Meter 1</FONT></a></li>
 			<li><a href="device_2.html"><FONT FACE="Calibri">Smart Meter 2</FONT></a></li>
 			<li><a href="device_3.html"><FONT FACE="Calibri">Smart Meter 3</FONT></a></li>
 			</ul>
 		</nav>
-
 		<div id="content">
-
-
-
 		<center>
 		    <br><img src="Gerät11.jpg" width="30%" height=220 /></br>
 		</center>
-
-
 <br><center>
 <table border="2" bgcolor="white">
         <tr>
@@ -64,11 +47,10 @@
 
 <br><center>
 <table border="2" bgcolor="white" onload="zufallsZahl()">
-        <tr>
-                <th colspan="2">Aktueller Status:</td>
-
-        </tr>
-        <tr>
+  <tr>
+    <th colspan="2">Aktueller Status:</td>
+  </tr>
+  <tr>
     <td width="200" height="10">Spannung</td>
                 <td width="300" height="10">
 
@@ -93,12 +75,18 @@
 
 <table id="formDataTable" border="2" bgcolor="white">
   <tr>
-    <th colspan="3">Verbrauchstabelle:</td>
+    <th colspan="5">Verbrauchstabelle:</td>
   </tr>
 
 	<tr>
 		<td>
-			<label style="margin-right: 80px;"> Nutzerkennung: </label>
+			<label style="margin-right: 80px;"> Nutzerkürzel: </label>
+		</td>
+		<td>
+			<label style="margin-right: 80px;"> Namen: </label>
+		</td>
+		<td>
+			<label style="margin-right: 80px;"> Matrikelnummer: </label>
 		</td>
 		<td>
 			<label style="margin-right: 80px;"> Verbrauch: </label>
