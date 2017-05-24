@@ -47,18 +47,22 @@ var form = document.getElementById("submitForm");
 function handleForm(event) { event.preventDefault(); }
 form.addEventListener('submit', handleForm);
 
-var allowedUsers = ["FL46", "TH93", "HA34", "NA20"]
+var person1 = { short: "FL46", name: "Friedrich Lattermann", matrikelNummer: 366146 }
+var person2 = { short: "TH93", name: "Tobias Hasse", matrikelNummer: 365893}
+var person3 = { short: "HA34", name: "Hammam Abu Attieh", matrikelNummer: 358034 }
+var person4 = { short: "NA20", name: "Niclas Altenkirch", matrikelNummer: 386520 }
+var personArray = [person1, person2, person3, person4]
 
 function checkUserInput(user, usage) {
   if (user.match(/^\S{2}\d{2}$/) == user && usage.match(/\d*/) == usage){
-    for (i = 0; i < allowedUsers.length; i++) {
-      if (allowedUsers[i] == user) {
-        return true;
+    for (i = 0; i < personArray.length; i++) {
+      if (personArray[i].short == user) {
+        return [true, personArray[i]];
       }
     }
     alert("Ihre Nutzerkennung ist nicht authorisiert");
   } else {
-    alert("Bitte benutzen sie das richtige Nutzerkennungs und Verbrauchswert Format");
+    alert("Bitte benutzen Sie das richtige Nutzerkennungs- und Verbrauchswertformat");
   }
   return false;
 }
@@ -67,22 +71,28 @@ function chkFormular() {
   var user = document.Formular.Name.value;
   var usage = document.Formular.Verbrauch.value;
   if ( user != "" && usage != "" ) {
-    if (checkUserInput(user, usage)){
-      console.log("works");
-    }else{
+    var returnArray = checkUserInput(user, usage);
+    if (!returnArray[0]) {
       return;
     }
+    user = returnArray[1];
     currentTime = new Date();
     var table = document.getElementById("formDataTable");
     var row = table.insertRow(table.rows.length);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
 
+    var formattedTime = (currentTime.getDate() +"." + (currentTime.getMonth() + 1) + "." + currentTime.getFullYear( )
+                          + " " + currentTime.getHours() +":"+ currentTime.getMinutes() +":"+ currentTime.getSeconds())
     cell1.innerHTML = document.Formular.Name.value
-    cell2.innerHTML = document.Formular.Verbrauch.value
-    cell3.innerHTML = currentTime
+    cell2.innerHTML = user.name
+    cell3.innerHTML = user.matrikelNummer
+    cell4.innerHTML = document.Formular.Verbrauch.value
+    cell5.innerHTML = formattedTime
   }else{
-    alert("Bitte füllen sie beide Spalten aus!");
+    alert("Bitte füllen sie beide Zeilen aus!");
   }
 }
